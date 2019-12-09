@@ -98,7 +98,7 @@ exports.onCreateNode = async ({ node, getNode, actions, store, cache, createNode
              cache,
              createNode,
              createNodeId,
-             auth: _auth,
+    //         auth: _auth,
            })
          } catch (e) {
            // Ignore
