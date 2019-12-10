@@ -6,7 +6,7 @@ import Img from "gatsby-image";
 
 export default function({ data }) {
   let isImage = false;
-  if (data.file.node.childImageSharp) {
+  if (data.file.childImageSharp) {
     isImage = true;
   }
     return (
