@@ -51,10 +51,19 @@ module.exports = {
          // This is field under which it's accessible
          fieldName: `wpgraphql`,
          // Url to query from
-         //url: `http://lallathebuddha.com/graphql`,
-        url: `http://41.185.8.137/~xic02/alchemyofremembrance/graphql`
+         url: `http://lallathebuddha.com/graphql`,
+      //  url: `http://alchemy-of-remembrance.local/graphql`
        },
      },
+    // {
+    //   resolve: '@wyze/gatsby-source-graphql',
+    //   options: {
+    //     headers: {
+    //       authorization: `Bearer b7e5091471a6d7a3f47a82efc149149cf9ec1b49`,
+    //     },
+    //     url: 'https://api.github.com/graphql',
+    //   },
+    // },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
   ],

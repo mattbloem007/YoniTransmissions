@@ -42,6 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
 
 
     `).then(result => {
+      console.log(result.data)
         const blogPosts = result.data.wpgraphql.posts.edges;
         const allPages = result.data.wpgraphql.pages.edges;
         console.log(blogPosts)
