@@ -81,32 +81,32 @@ exports.createPages = ({ graphql, actions }) => {
     });
 };
 
-exports.onCreateNode = async ({ node, getNode, actions, store, cache, createNodeId, _auth, }) => {
-    const { createNodeField, createNode } = actions;
-    let fileNode
-
-    if (node.internal.type === `SitePage`) {
-     if (node.context != undefined) {
-
-       if (node.context.featuredImage) {
-         console.log("NODE: ", node.context)
-         try {
-           fileNode = await createRemoteFileNode({
-             url: node.context.featuredImage.sourceUrl,
-             parentNodeId: node.id,
-             store,
-             cache,
-             createNode,
-             createNodeId,
-             auth: _auth,
-           })
-         } catch (e) {
-           // Ignore
-         }
-       }
-      }
-    }
-    if (fileNode) {
-      node.localFile___NODE = fileNode.id
-    }
-};
+// exports.onCreateNode = async ({ node, getNode, actions, store, cache, createNodeId, _auth, }) => {
+//     const { createNodeField, createNode } = actions;
+//     let fileNode
+//
+//     if (node.internal.type === `SitePage`) {
+//      if (node.context != undefined) {
+//
+//        if (node.context.featuredImage) {
+//          console.log("NODE: ", node.context)
+//          try {
+//            fileNode = await createRemoteFileNode({
+//              url: node.context.featuredImage.sourceUrl,
+//              parentNodeId: node.id,
+//              store,
+//              cache,
+//              createNode,
+//              createNodeId,
+//              auth: _auth,
+//            })
+//          } catch (e) {
+//            // Ignore
+//          }
+//        }
+//       }
+//     }
+//     if (fileNode) {
+//       node.localFile___NODE = fileNode.id
+//     }
+// };
