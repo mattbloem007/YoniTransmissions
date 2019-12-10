@@ -6,9 +6,9 @@ import Img from "gatsby-image";
 
 export default function({ data }) {
   let isImage = false;
-  if (data.file.node.childImageSharp) {
-    isImage = true;
-  }
+  // if (data.file.node.childImageSharp) {
+  //   isImage = true;
+  // }
     return (
       <section id="about" className="about-section text-center">
         <div className="container">
@@ -20,7 +20,7 @@ export default function({ data }) {
               }} />
             </div>
           </div>
-          {isImage? <Img className="img-fluid" fluid={this.props.file.node.childImageSharp.fluid}/> : null}
+          {/**isImage? <Img className="img-fluid" fluid={this.props.file.node.childImageSharp.fluid}/> : null*/}
         </div>
       </section>
     )
