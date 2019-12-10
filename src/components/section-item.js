@@ -9,9 +9,9 @@ class SectionItem extends React.Component {
       let ind = this.props.index + 1
       let classN = "wrapper spotlight style" + ind
       console.log("FILE", this.props.file)
-      // if (this.props.file.node.childImageSharp) {
-      //   isImage = true;
-      // }
+      if (this.props.file.node.childImageSharp) {
+        isImage = true;
+      }
       if (ind % 2 == 0) {
         classN = "wrapper alt spotlight style" + ind
       }
@@ -26,7 +26,7 @@ class SectionItem extends React.Component {
                   }} />
                 </div>
               </div>
-              {/**isImage? <Img className="img-fluid" fluid={this.props.file.node.childImageSharp.fluid}/> : null*/}
+              {isImage? <Img className="img-fluid" fluid={this.props.file.node.childImageSharp.fluid}/> : null}
             </div>
           </section>
         )

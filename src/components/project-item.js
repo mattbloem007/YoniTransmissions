@@ -8,14 +8,14 @@ class ProjectItem extends React.Component {
       let isImage = false;
       let ind = this.props.index + 1
       console.log("FILE", this.props.file)
-      // if (this.props.file.node.childImageSharp) {
-      //   isImage = true;
-      // }
+      if (this.props.file.node.childImageSharp) {
+        isImage = true;
+      }
       if (ind == 1) {
         return (
           <div className="row align-items-center no-gutters mb-4 mb-lg-5">
             <div className="col-xl-8 col-lg-7">
-            {/**isImage? <Img fluid={this.props.file.node.childImageSharp.fluid}/> : null*/}
+            {isImage? <Img fluid={this.props.file.node.childImageSharp.fluid}/> : null}
             </div>
             <div className="col-xl-4 col-lg-5">
               <div className="featured-text text-center text-lg-left">
@@ -32,7 +32,7 @@ class ProjectItem extends React.Component {
         return (
           <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
             <div className="col-lg-6">
-              {/**isImage? <Img fluid={this.props.file.node.childImageSharp.fluid}/> : null*/}
+              {isImage? <Img fluid={this.props.file.node.childImageSharp.fluid}/> : null}
             </div>
             <div className="col-lg-6">
               <div className="bg-black text-center h-100 project">
@@ -55,7 +55,7 @@ class ProjectItem extends React.Component {
 
                   <div className="row justify-content-center no-gutters">
                     <div className="col-lg-6">
-                      {/**isImage? <Img fluid={this.props.file.node.childImageSharp.fluid}/> : null*/}
+                      {isImage? <Img fluid={this.props.file.node.childImageSharp.fluid}/> : null}
                     </div>
                     <div className="col-lg-6 order-lg-first">
                       <div className="bg-black text-center h-100 project">
@@ -77,7 +77,7 @@ class ProjectItem extends React.Component {
         return (
           <div className="row align-items-center no-gutters mb-4 mb-lg-5">
             <div className="col-xl-8 col-lg-7">
-            {/**isImage? <Img fluid={this.props.file.node.childImageSharp.fluid}/> : null*/}
+            {isImage? <Img fluid={this.props.file.node.childImageSharp.fluid}/> : null}
             </div>
             <div className="col-xl-4 col-lg-5">
               <div className="featured-text text-center text-lg-left">
